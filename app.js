@@ -9,6 +9,9 @@ const reportEl = document.getElementById('report');
 const catchphrasesEl = document.getElementById('catchphrases');
 const catchphraseInput = document.getElementById('catchphrase-input');
 const catchphraseButton = document.getElementById('catchphrase-button');
+const nameButton = document.getElementById('name-button');
+const nameInput = document.getElementById('add-name');
+const nameDisplay = document.getElementById('nameDisplayed');
 
 // set state for how many times the user changes the head, middle, and bottom
 let headCount = 0;
@@ -16,6 +19,8 @@ let middleCount = 0;
 let bottomCount = 0;
 // set state for all of the character's catchphrases
 let catchPhrases = [];
+let characterNames = [];
+
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
@@ -61,6 +66,19 @@ catchphraseButton.addEventListener('click', () => {
     catchphraseInput.value = '';
     // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
     displayCatchphrases();
+    //hide the button again so you cannot move forward without inputting
+    catchphraseButton.classList.add('hidden');
+});
+
+catchphraseInput.addEventListener('input', () => {
+    catchphraseButton.classList.remove('hidden');
+});
+
+nameButton.addEventListener('click', () => {
+    const value = nameInput.value;
+    characterNames.push(value);
+    characterNames.value = '';
+    displayName();
 });
 
 function displayStats() {
@@ -89,17 +107,16 @@ function displayCatchphrases() {
     console.log(catchPhrases);
 }
 
-// catchphraseInput.addEventListener('input', () => {
-//     disabledButton();
-// });
 
+function displayName() {
+    nameDisplay.textContent = '';
+    for (let characterName of characterNames) {
+        const h2Tag = document.createElement('h2');
+        nameDisplay.append(h2Tag);
 
-// function disabledButton() {
-//     if (catchphraseInput.value === null) {
-//         catchphraseButton.disabled = false;
-//     } else {
-//         catchphraseButton.disable = true;
-//     }
-// }
+        h2Tag.textContent = characterName;
+        h2Tag.classList.add('bigName');
+    }
 
-// disabledButton();
+    characterNames.pop();
+}

@@ -97,7 +97,7 @@ main {
     background-color: white;
     margin: 0 auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 850px;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -110,6 +110,7 @@ main {
 
 .left {
     overflow: scroll;
+    height: 100%;
 }
 
 .left, .right {
@@ -118,6 +119,7 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
 }
 
 .character {
@@ -140,6 +142,11 @@ main {
     text-align: center;
 }
 
+bigName {
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
 .hidden {
-    
+    display: none;
 }

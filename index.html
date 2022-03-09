@@ -45,8 +45,13 @@
                 <label>
                     Add a catch phrase
                     <input placeholder = "witty catchphrase here" id="catchphrase-input" />
-                    <button id="catchphrase-button">Add</button>
+                    <button class="hidden" id="catchphrase-button">Add</button>
                 </label>
+                <div> 
+                    Character Name
+                    <input id="add-name" />
+                    <button id="name-button">Name</button>
+                </div>
             </div>
             <div id="stats">
                 <p id="report"></p>
@@ -56,6 +61,7 @@
             </div>
         </div>
         <div class="right">
+            <div id="nameDisplayed"></div>
             <div class="character">
                 <div class="bg head" id="head">
                 </div>
