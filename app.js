@@ -89,5 +89,17 @@ function displayCatchphrases() {
     console.log(catchPhrases);
 }
 
+// catchphraseInput.addEventListener('input', () => {
+//     disabledButton();
+// });
 
 
+// function disabledButton() {
+//     if (catchphraseInput.value === null) {
+//         catchphraseButton.disabled = false;
+//     } else {
+//         catchphraseButton.disable = true;
+//     }
+// }
+
+// disabledButton();
