@@ -134,8 +134,12 @@ main {
 
 }
 
-.catchphrase {
+.catchphraseAdded {
     font-size: 2rem;
     font-family: cursive;
     text-align: center;
+}
+
+.hidden {
+    display: none;
 }
