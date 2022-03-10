@@ -120,10 +120,10 @@ function displayName() {
 //stretch goal #2 create arrays for head, middle and bottom
 let headArr = [{ display: 'Duck Head', value: '1' }, { display: 'Bird Head', value: '2' }, 
     { display: 'Horse Head', value: '3' }, { display: 'Dog Head', value: '4' }];
-// let middleArr = [{ display: 'Blue Middle', value: '1' }, { display: 'Fancy Middle', value: '2' }, 
-//     { display: 'Red Middle', value: '3' }, { display: 'Pink Middle', value: '4' }];
-// let bottomArr = [{ display: 'Blue pants', value: '1' }, { display: 'White Pants', value: '2' }, 
-//     { display: 'leg Pants', value: '3' }];
+let middleArr = [{ display: 'Blue shirt', value: 'blue' }, { display: 'Dress', value: 'dress' }, 
+    { display: 'Red Shirt', value: 'red' }, { display: 'Pink shirt', value: 'pink' }];
+let bottomArr = [{ display: 'Blue jeans', value: 'blue' }, { display: 'White Pants', value: 'white' }, 
+    { display: 'just a leg', value: 'leg' }];
 
 function createDropdown(){
     for (let head of headArr){
@@ -132,7 +132,18 @@ function createDropdown(){
         option.textContent = head.display;
         option.value = head.value;
     }
-    
+    for (let middle of middleArr){
+        const option = document.createElement('option');
+        middleDropdown.append(option);
+        option.textContent = middle.display;
+        option.value = middle.value;
+    }
+    for (let bottom of bottomArr){
+        const option = document.createElement('option');
+        bottomDropdown.append(option);
+        option.textContent = bottom.display;
+        option.value = bottom.value;
+    }
 }
 
 createDropdown();
