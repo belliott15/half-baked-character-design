@@ -21,7 +21,6 @@ let bottomCount = 0;
 let catchPhrases = [];
 let characterNames = [];
 
-
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
     const value = headDropdown.value;
@@ -104,9 +103,7 @@ function displayCatchphrases() {
     if (catchPhrases.length >= 4) {
         catchPhrases.shift();
     }
-    console.log(catchPhrases);
 }
-
 
 function displayName() {
     nameDisplay.textContent = '';
@@ -119,3 +116,23 @@ function displayName() {
     }
     characterNames.pop();
 }
+
+//stretch goal #2 create arrays for head, middle and bottom
+let headArr = [{ display: 'Duck Head', value: '1' }, { display: 'Bird Head', value: '2' }, 
+    { display: 'Horse Head', value: '3' }, { display: 'Dog Head', value: '4' }];
+let middleArr = [{ display: 'Blue Middle', value: '1' }, { display: 'Fancy Middle', value: '2' }, 
+    { display: 'Red Middle', value: '3' }, { display: 'Pink Middle', value: '4' }];
+let bottomArr = [{ display: 'Blue pants', value: '1' }, { display: 'White Pants', value: '2' }, 
+    { display: 'leg Pants', value: '3' }];
+
+function createDropdown(){
+    for (let head of headArr){
+        const option = document.createElement('option');
+        headDropdown.append(option);
+        option.textContent = head.display;
+        option.value = head.value;
+    }
+    
+}
+
+createDropdown();

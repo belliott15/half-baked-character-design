@@ -31,3 +31,9 @@ User [this repository](https://github.com/alchemycodelab/half-baked-web-01-chara
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --: |
 | IMPURE: `displayStats() : mutates the DOM to display a string describing the counts.` |   1 |
 | IMPURE: `displayCatchphrases() : clears out the old list from the DOM, loops through catchphrases, renders and appends to the list element`                                                                                                                                                          |   2 |
+
+- Add the option for the user to name the character and store the name in state. Display that name in big letters at the top.
+- Make three arrays of objects of this kind of shape: [ { display: "Duck head", value: "1" }, { display: "Blue Bird Head", value: "2" }, { display: "Horse Head", value: "3" ]. Now, instead of hard coding your dropdown options, generate them dynamically by looping over these arrays.
+- Wrap the catchphrase input and button in a form tag and use a 'submit' handler with the new FormData() constructor to get data from the input. (Hint: Look up e.preventDefault() and why it's useful in this case)
+- Use a radio button (probably the most challenging form input) to change between 'cartoon mode' and 'photo mode'. Load a different set of images (photo of duck vs cartoon duck, etc) depending on the mode.
+- In addition to keeping track of the number of times each dropdown was changed, keep track of (and display to the user) a "history" of those changes.
