@@ -77,7 +77,7 @@ catchphraseInput.addEventListener('input', () => {
 nameButton.addEventListener('click', () => {
     const value = nameInput.value;
     characterNames.push(value);
-    characterNames.value = '';
+    nameInput.value = '';
     displayName();
 });
 
@@ -117,6 +117,5 @@ function displayName() {
         h2Tag.textContent = characterName;
         h2Tag.classList.add('bigName');
     }
-
     characterNames.pop();
 }
