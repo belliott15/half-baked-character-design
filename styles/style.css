@@ -142,9 +142,11 @@ main {
     text-align: center;
 }
 
-bigName {
-    font-size: 40px;
-    letter-spacing: 1px;
+.bigName {
+    font-size: 5em;
+    font-family: cursive, sans-serif;
+    color: pink;
+    margin: 0 auto;
 }
 
 .hidden {
